@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="./script.js" defer></script>
     <title>Gasto Mensal</title>
 </head>
 <body>
@@ -15,8 +16,8 @@
             <h1>Relatório de gasto mensal</h1>
             <form>
                 <div class="legenda">
-                    <p>Entradas (<span>+</span>)</p>
-                    <p>Saídas (<span>-</span>)</p>
+                    <p>Entradas (<span class="span1">+</span>)</p>
+                    <p>Saídas (<span class="span2">-</span>)</p>
                 </div>
                 
                 <div class="salario">
@@ -33,7 +34,7 @@
                         <input type="text" placeholder="Ex: Academia">
                     </div>
                     <div class="bloco-dois">   
-                        <input type="text" placeholder="Digite aqui o valor">
+                        <input id="primeiroValor" type="text" placeholder="Digite aqui o valor">
                         <input type="text" placeholder="Digite aqui o valor">
                         <input type="text" placeholder="Digite aqui o valor">
                         <input type="text" placeholder="Digite aqui o valor">
@@ -55,9 +56,10 @@
                         <input type="text" placeholder="Digite aqui o valor">
                     </div>
                 </section>
-            </form>
-
-            
+                    <div class="botao">
+                        <button id="botao" onclick="resultado()" type="submit">Calcular!</button>
+                    </div>        
+                </form> 
         </main>
 </body>
 </html>
