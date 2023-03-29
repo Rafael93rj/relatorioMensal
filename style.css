@@ -59,7 +59,7 @@ h1 {
     display: flex;
     width: 28%;
     font-weight: 500;
-    background-color: rgb(100, 124, 116);
+    background-color: rgba(100, 124, 116, 0.7);
     border-radius: 4px;
     align-items: center;
     justify-content: center;
@@ -87,7 +87,7 @@ section > p {
     width: 30%;
     height: 114px;
     font-weight: 500;
-    background-color: rgb(113, 131, 125);
+    background-color: rgba(113, 131, 125, 0.7);
     border-radius: 4px;
     align-items: center;
     justify-content: center;
@@ -140,7 +140,7 @@ button {
 }
 
 button:hover {
-    background-color: rgb(170, 187, 181);
+    background-color: rgba(176, 185, 184, 0.3);
     border: 1.5px solid rgb(100, 124, 116);
     cursor: pointer;
 }
