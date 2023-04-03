@@ -150,6 +150,7 @@ button:active {
 #respostaUm :nth-child(5) {
     margin: 8px;
     text-align: center;
+    margin-bottom: 4px;
 }
 
 #respostaDois :nth-child(1) {
@@ -171,8 +172,7 @@ img {
 #check, #out {
     display: flex;
     justify-content: center;
-    
-
+    padding: 4px;
     border: none;
     width: 10%;
 }

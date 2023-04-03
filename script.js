@@ -28,7 +28,7 @@ function respostaFinal() {
                 let divisaoSemana = total / 4;
                 let poupanca = entrada * 0.15;
 
-                document.getElementById('opcaoInvestimento').innerHTML = `<p>• Lembre-se de guardar pelo menos ${poupanca} reais.</p><p>• O seu saldo de ${total} reais, te da a possibilidade de usar ${divisaoSemana} reais por semana. Isso te ajudaria a fazer mais compras à vista e economizar no cartão de crédito.<p>`;
+                document.getElementById('opcaoInvestimento').innerHTML = `<p>• Lembre-se de guardar pelo menos ${poupanca} reais.</p><p>• O seu saldo de ${total} reais, te da a possibilidade de usar ${divisaoSemana} reais por semana. Isso te ajudaria a fazer mais compras à vista gerando uma economia no cartão de crédito.<p>`;
             }
             botaoOut.onclick = function() {
                 location.reload();
