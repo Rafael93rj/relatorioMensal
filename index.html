@@ -15,54 +15,63 @@
         <main>
             <h1>Relatório de gasto mensal</h1>
             <form>
-                <div class="legenda">
-                    <p>Entradas (<span class="span1">+</span>)</p>
-                    <p>Saídas (<span class="span2">-</span>)</p>
-                </div>
                 
                 <div class="salario">
-                    <p>Salário</p>
-                    <input id="salarioLiq" type="text" placeholder="Digite aqui o valor">
+                    <div class="salario-card">
+                        <p>Salário/Total</p>
+                    </div>
+                        <input id="salarioLiq" autocomplete="off" type="text" placeholder="Digite aqui o valor">
                 </div>
 
                 <section class="consumo-fixo">
-                    <p>Consumo <br>fixo</p>
+                    <div class="card">
+                        <p>Consumo <br>fixo</p>
+                        <p title="Segundo a regra 50-15-35, o ideal é gastar no máximo 50% do seu salário em custo fixo.">*Limite: 50% do total. </p>
+                    </div>
                     <div class="bloco-um">
-                        <input type="text" placeholder="Ex: Conta de luz">
-                        <input type="text" placeholder="Ex: Conta d'água">
-                        <input type="text" placeholder="Ex: Faculdade">
-                        <input type="text" placeholder="Ex: Academia">
+                        <input autocomplete="off" type="text" placeholder="Ex: Conta de luz">
+                        <input autocomplete="off" type="text" placeholder="Ex: Conta d'água">
+                        <input autocomplete="off" type="text" placeholder="Ex: Faculdade">
+                        <input autocomplete="off" type="text" placeholder="Ex: Academia">
                     </div>
                     <div class="bloco-dois">   
-                        <input id="primeiroValor" type="text" placeholder="Digite aqui o valor">
-                        <input id="primeiroValor" type="text" placeholder="Digite aqui o valor">
-                        <input type="text" placeholder="Digite aqui o valor">
-                        <input type="text" placeholder="Digite aqui o valor">
+                        <input id="primeiroValor" autocomplete="off" type="text" placeholder="Digite aqui o valor">
+                        <input id="primeiroValor" autocomplete="off" type="text" placeholder="Digite aqui o valor">
+                        <input autocomplete="off" type="text" placeholder="Digite aqui o valor">
+                        <input autocomplete="off" type="text" placeholder="Digite aqui o valor">
                     </div>
                 </section>
 
                 <section class="consumo-variavel">
-                    <p>Consumo variável</p>
-                    <div class="bloco-um">
-                        <input type="text" placeholder="Ex: Cartão de crédito">
-                        <input type="text" placeholder="Ex: Mercado">
-                        <input type="text" placeholder="Ex: Sacolão">
-                        <input type="text" placeholder="Ex: Farmácia">
+                    <div class="card">
+                        <p>Consumo variável</p>
+                        <p title="Segundo a regra 50-15-35, o ideal é gastar no máximo 35% do seu salário em custo variável.">*Limite: 35% do total.</p>
+                    </div>
+                        <div class="bloco-um">
+                        <input autocomplete="off" type="text" placeholder="Ex: Cartão de crédito">
+                        <input autocomplete="off" type="text" placeholder="Ex: Mercado">
+                        <input autocomplete="off" type="text" placeholder="Ex: Sacolão">
+                        <input autocomplete="off" type="text" placeholder="Ex: Farmácia">
                     </div>
                     <div class="bloco-dois">
-                        <input type="text" placeholder="Digite aqui o valor">
-                        <input type="text" placeholder="Digite aqui o valor">
-                        <input type="text" placeholder="Digite aqui o valor">
-                        <input type="text" placeholder="Digite aqui o valor">
+                        <input autocomplete="off" type="text" placeholder="Digite aqui o valor">
+                        <input autocomplete="off" type="text" placeholder="Digite aqui o valor">
+                        <input autocomplete="off" type="text" placeholder="Digite aqui o valor">
+                        <input autocomplete="off" type="text" placeholder="Digite aqui o valor">
                     </div>
                 </section>
                     <div class="botao">
-                        <button id="botao">Calcular!</button>
+                        <button id="botao" type="button">Calcular!</button>
                     </div>
                       
                 </form> 
                 <div id="respostaUm"></div>  
                 <div id="respostaDois"></div>
+                <div id="investir">
+                    <button id="check" type="button"><img src="./img/check.png" alt=""></button>
+                    <button id="out" type="button"><img src="./img/x.png" alt=""></button>
+                </div>
+                <div id="opcaoInvestimento"></div>
         </main>
 </body>
 </html>
