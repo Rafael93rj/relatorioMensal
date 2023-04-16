@@ -3,7 +3,6 @@
     padding: 0; 
     border: none; 
     outline: none;
-    box-sizing: border-box;
     text-decoration: none; 
     list-style: none; 
     font-family: 'Montserrat', sans-serif;
@@ -12,9 +11,10 @@
 
 body {
     height: 100vh;
-    display: flex;
+    display: flex;  
     justify-content: center;
     align-items: center;
+    box-sizing: content-box;
     background-color: rgb(218, 218, 218);
     padding: 16px;
 
@@ -26,6 +26,9 @@ main {
     background-color: rgb(202, 202, 202);
     border-radius: 16px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.06);
+    
+
+    
 }
 h1 {
     font-size: 24px;
@@ -85,6 +88,10 @@ section {
     font-size: 10px;
 }
 
+.card-mobile {
+    display: none;
+}
+
 .bloco-um {
     display: flex;
     flex-direction: column;
@@ -140,6 +147,15 @@ button:active {
     background-color: rgba(104, 133, 108, 0.2);
     border: 1.5px solid rgb(53, 167, 68);
 }
+#botaoClean:hover {
+    background-color: rgba(133, 104, 104, 0.1);
+    border: 1.5px solid rgb(134, 46, 46);
+    cursor: pointer;
+}
+#botaoClean:active {
+    background-color: rgba(133, 104, 104, 0.2);
+    border: 1.5px solid rgb(167, 53, 53);
+}
 
 #respostaUm :nth-child(1) {
     text-align: center;
@@ -179,3 +195,55 @@ img {
 
 
 
+@media (max-width: 488px) {
+    body {
+        height: 100vh;
+        box-sizing: content-box;
+        padding: 16px;
+    }
+   
+    .salario-card{
+        width: 26.3%;
+        font-weight: 500; 
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 460px) {
+    body {
+        height: 100vh;
+    }
+    .salario-card{
+        width: 25%;
+    }
+}
+
+@media (max-width: 439px) {
+    body {
+        height: 100%;
+    }
+    .salario {
+        align-items: center;
+    }
+
+    .salario-card{
+        width: 50%;
+    }
+
+    .salario > input {
+        width: 50%;
+    }
+
+    .card {
+        display: none;
+    }
+
+    .card-mobile {
+        display: block;
+        margin-top: 8px;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(170, 170, 170, 0.7);
+        border-radius: 4px;
+    }
+}

@@ -1,4 +1,5 @@
 let botaoCalcular = document.getElementById('botao');
+let botaoLimpar = document.getElementById('botaoClean');
 let botaoCheck = document.getElementById('check');
 let botaoOut = document.getElementById('out');
 let inputSal = document.getElementById('salarioLiq');
@@ -16,6 +17,7 @@ let inputs = document.getElementsByTagName('input');
 
 botaoCheck.style.display = 'none';
 botaoOut.style.display = 'none';
+botaoLimpar.style.display = 'none';
 
 function respostaFinal() {
 
@@ -37,7 +39,8 @@ function respostaFinal() {
         document.getElementById('respostaUm').innerHTML = `<h3>Parabéns, seu saldo está positivo!</h3>  <p>• Seu saldo total é de ${total} reais.</p> <p> • Seu consumo fixo correspondeu a ${porcentagemFixa}% do seu salário.</p> <p> • Seu consumo variável foi de ${porcentagemVariavel}%.</p><p>Quer usar o seu dinheiro de maneira mais inteligente?</p>`;
         
             botaoCheck.onclick = function() {
-                
+
+                botaoLimpar.style.display = 'block';
                 let divisaoSemana = (total / 4).toFixed(2);
                 let poupanca = (entrada * 0.15).toFixed(2);
 
@@ -46,8 +49,14 @@ function respostaFinal() {
             botaoOut.onclick = function() {
                 location.reload();
             } 
+            botaoLimpar.onclick = function() {
+                location.reload();
+            }
             } else if (input1.value == "" || input2.value == "" || input3.value == "" || input4.value == "" || input5.value == "" || input6.value == "" || input7.value == "" || input8.value == "") {
                 alert('Você esqueceu algum(s) campo(s) vazio(s), por favor, insira um valor válido. Caso não tenha, insira o valor de zero "0"!');
+
+            } else if (inputSal.value == "") {
+                alert('Por favor, insira um valor de salário');
 
             } else {
             botaoCheck.style.display = 'none';
